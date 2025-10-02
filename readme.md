@@ -43,7 +43,7 @@ string-calc-TDD-kata/
 
 ## Requirements
 
-- Node.js (v12 or higher)
+- Node.js (v18 or higher)
 - npm (v6 or higher)
 
 ## Contributing
