@@ -1,4 +1,4 @@
-const add = require("./calculator");
+const add = require("../src/calculator");
 
 test("for an empty string it will return 0", () => {
   expect(add("")).toBe(0);
@@ -42,4 +42,12 @@ test("for adding number greater than 1000 it will ignore them", () => {
 
 test("delimiters can be of any length with the following format: //[*]{n}\\n", () => {
   expect(add("//[***]\n1***2***3")).toBe(6);
+});
+
+test("allow multiple delimiters like this: //[delim1][delim2]\\n", () => {
+  expect(add("//[*][%]\n1*2%3")).toBe(6);
+});
+
+test("make sure you can handle multiple delimiters with length longer than one char", () => {
+  expect(add("//[*][%%]\n10*20%%30")).toBe(60);
 });

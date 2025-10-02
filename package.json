@@ -2,12 +2,16 @@
   "name": "string-calc-tdd-kata",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/calculator.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "TDD",
+    "JavaScript",
+    "Kata"
+  ],
+  "author": "Vishal Patel",
   "license": "ISC",
   "devDependencies": {
     "jest": "^30.2.0"
