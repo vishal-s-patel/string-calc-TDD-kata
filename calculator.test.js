@@ -19,3 +19,19 @@ test("for multiple numbers it will return the sum", () => {
 test("1\\n2,3 should return 6", () => {
   expect(add("1\n2,3")).toBe(6);
 });
+
+test("//;\\n1;2 where the delimiter is ; should return 3.", () => {
+  expect(add("//;\n1;2")).toBe(3);
+});
+
+test("for negative numbers it will throw an exception", () => {
+  expect(() => {
+    add("-1,2");
+  }).toThrow("negatives not allowed -1");
+});
+
+test("for multiple negative numbers it will throw an exception", () => {
+  expect(() => {
+    add("-1,-2,3");
+  }).toThrow("negatives not allowed -1,-2");
+});
