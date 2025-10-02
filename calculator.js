@@ -8,8 +8,14 @@ function add(numbers) {
   }
   let delimiter = ",";
   if (numbers.startsWith("//")) {
-    delimiter = numbers[2];
-    numbers = numbers.slice(4);
+    if (numbers[2] === "[") {
+      const delimiterEndIndex = numbers.indexOf("]");
+      delimiter = numbers.slice(3, delimiterEndIndex);
+      numbers = numbers.slice(delimiterEndIndex + 2);
+    } else {
+      delimiter = numbers[2];
+      numbers = numbers.slice(4);
+    }
   }
   if (numbers.includes("\n")) {
     numbers = numbers.replace("\n", delimiter);

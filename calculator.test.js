@@ -39,3 +39,7 @@ test("for multiple negative numbers it will throw an exception", () => {
 test("for adding number greater than 1000 it will ignore them", () => {
   expect(add("2,1001")).toBe(2);
 });
+
+test("delimiters can be of any length with the following format: //[*]{n}\\n", () => {
+  expect(add("//[***]\n1***2***3")).toBe(6);
+});
