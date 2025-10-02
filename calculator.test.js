@@ -35,3 +35,7 @@ test("for multiple negative numbers it will throw an exception", () => {
     add("-1,-2,3");
   }).toThrow("negatives not allowed -1,-2");
 });
+
+test("for adding number greater than 1000 it will ignore them", () => {
+  expect(add("2,1001")).toBe(2);
+});

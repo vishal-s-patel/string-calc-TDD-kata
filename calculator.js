@@ -20,7 +20,12 @@ function add(numbers) {
     if (negatives.length > 0) {
       throw new Error(`negatives not allowed ${negatives.join(",")}`);
     }
-    return numArray.reduce((acc, curr) => acc + curr, 0);
+    return numArray.reduce((acc, curr) => {
+      if (curr > 1000) {
+        curr = 0;
+      }
+      return acc + curr;
+    }, 0);
   }
   return parseInt(numbers);
 }
