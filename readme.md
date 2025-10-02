@@ -36,9 +36,9 @@ npm test -- --watch
 ```
 string-calc-TDD-kata/
 ├── src/
-│   └── stringCalculator.js
+│   └── calculator.js
 └── test/
-    └── stringCalculator.test.js
+    └── calculator.test.js
 ```
 
 ## Requirements
