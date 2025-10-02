@@ -15,3 +15,7 @@ test("for two numbers it will return the sum", () => {
 test("for multiple numbers it will return the sum", () => {
   expect(add("1,2,3,4,5")).toBe(15);
 });
+
+test("1\\n2,3 should return 6", () => {
+  expect(add("1\n2,3")).toBe(6);
+});

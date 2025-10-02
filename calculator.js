@@ -6,6 +6,9 @@ function add(numbers) {
   if (numbers === "") {
     return 0;
   }
+  if (numbers.includes("\n")) {
+    numbers = numbers.replace("\n", ",");
+  }
   if (numbers.includes(",")) {
     const numArray = numbers.split(",").map(Number);
     return numArray.reduce((acc, curr) => acc + curr, 0);
